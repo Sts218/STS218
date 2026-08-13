@@ -1,1 +1,341 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+
+/* STARTUP PAGE */
+
+.home {
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(circle at 20% 20%, #003cff55, transparent 30%),
+    radial-gradient(circle at 80% 80%, #00ffff44, transparent 30%),
+    #050510;
+}
+
+.startup {
+  animation: startup 2s ease;
+}
+
+.logo {
+  font-size: 110px;
+  font-weight: 900;
+
+  letter-spacing: 15px;
+
+  color: white;
+
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 30px #00ffff,
+    0 0 60px #0066ff,
+    0 0 100px #0066ff;
+
+  animation: glow 2s infinite alternate;
+}
+
+.tagline {
+  margin-top: 10px;
+
+  font-size: 20px;
+
+  letter-spacing: 8px;
+
+  color: #8eeeff;
+}
+
+.small-text {
+  margin-top: 25px;
+
+  color: #888899;
+}
+
+
+/* LAUNCH BUTTON */
+
+.launch {
+  display: inline-block;
+
+  margin-top: 40px;
+
+  padding: 16px 50px;
+
+  border: 2px solid #00ffff;
+
+  border-radius: 30px;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  text-decoration: none;
+
+  box-shadow: 0 0 15px #00ffff;
+
+  transition: 0.3s;
+}
+
+.launch:hover {
+  background: #00ffff;
+
+  color: #050510;
+
+  transform: scale(1.1);
+
+  box-shadow:
+    0 0 20px #00ffff,
+    0 0 50px #00ffff;
+}
+
+
+/* CHANNEL PAGE */
+
+.channel {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at 50% 0%, #003d4d, transparent 35%),
+    #050510;
+}
+
+
+/* NAVIGATION */
+
+nav {
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 35px;
+
+  background: #080817;
+
+  border-bottom: 1px solid #00ffff55;
+}
+
+.nav-logo {
+  color: #00ffff;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  letter-spacing: 5px;
+
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.back {
+  padding: 10px 20px;
+
+  color: #00ffff;
+
+  border: 1px solid #00ffff;
+
+  border-radius: 25px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.back:hover {
+  background: #00ffff;
+
+  color: #050510;
+}
+
+
+/* HERO */
+
+.hero {
+  text-align: center;
+
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: 80px;
+
+  letter-spacing: 12px;
+
+  text-shadow:
+    0 0 15px #00ffff,
+    0 0 40px #0066ff,
+    0 0 80px #0066ff;
+}
+
+.hero p {
+  color: #8eeeff;
+
+  font-size: 20px;
+
+  letter-spacing: 6px;
+}
+
+
+/* CONTENT */
+
+main {
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding: 30px 20px;
+}
+
+
+/* LIVE BOX */
+
+.live-box {
+  padding: 35px;
+
+  background: #101025;
+
+  border: 1px solid #00ffff;
+
+  border-radius: 20px;
+
+  box-shadow: 0 0 30px #00ffff22;
+
+  margin-bottom: 30px;
+}
+
+.live {
+  color: #ff3030;
+
+  font-size: 22px;
+
+  font-weight: bold;
+
+  text-shadow: 0 0 10px red;
+}
+
+.live-box h2 {
+  color: #00ffff;
+
+  font-size: 32px;
+}
+
+.live-box p {
+  color: #ccccdd;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+
+/* CARDS */
+
+.cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+.card {
+  padding: 25px;
+
+  background: #101025;
+
+  border: 1px solid #24244d;
+
+  border-radius: 18px;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  border-color: #00ffff;
+
+  box-shadow: 0 0 25px #00ffff33;
+}
+
+.card h2 {
+  color: #00ffff;
+}
+
+.card p {
+  color: #bbbbcc;
+
+  line-height: 1.6;
+}
+
+.emoji {
+  font-size: 45px;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  padding: 50px;
+
+  color: #555577;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes startup {
+
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+@keyframes glow {
+
+  from {
+    text-shadow:
+      0 0 10px #00ffff,
+      0 0 30px #00ffff;
+  }
+
+  to {
+    text-shadow:
+      0 0 20px #00ffff,
+      0 0 50px #0066ff,
+      0 0 100px #0066ff;
+  }
+
+}
